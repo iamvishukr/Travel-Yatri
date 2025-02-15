@@ -1,0 +1,81 @@
+@import "./../../../scss/variables";
+
+.filters {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow: visible;
+  flex-wrap: wrap; // Allow items to wrap on smaller screens
+
+  .custom-date-picker {
+    .react-daterange-picker__wrapper {
+      border: 1px solid rgba(110, 110, 110, 0.4);
+      border-radius: 10px;
+    }
+  }
+
+  .search-input {
+    position: relative;
+    input, select {
+      padding: 3px;
+      padding-right: 29px;
+      border: 1px solid rgba(110, 110, 110, 0.4);
+      border-radius: 10px;
+      &:hover {
+        border-color: $ty-primary;
+      }
+    }
+    .search-icon {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
+  }
+}
+
+// Media query for mobile responsiveness
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column; // Stack items vertically
+    gap: 10px; // Reduce gap between items
+
+    .custom-date-picker,
+    .search-input {
+      width: 100%; // Make inputs full width
+    }
+
+    .search-input {
+      input, select {
+        padding: 8px; // Increase padding for better touch usability
+      }
+    }
+  }
+}
+
+
+.table-btn{
+  border-radius: 12px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px;
+
+  &:hover{
+    background: $white !important;
+    color: $ty-primary !important;
+  }
+  
+  &:disabled {
+    opacity: 0.5 !important;
+  }
+}
+
+.table-text{
+  color: $ty-primary;
+  font-size: 12px;
+  font-weight: 600;
+}
+

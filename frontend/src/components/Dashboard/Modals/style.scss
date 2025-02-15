@@ -1,0 +1,510 @@
+@import "./../../../scss/variables";
+$ty-gray: #a9a9a9;
+// Modal background style
+.trip-detail-model {
+  backdrop-filter: blur(12px);
+}
+
+// Single trip view modal style
+.single-trip-view-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+  padding: 20px;
+  z-index: 1000;
+  .agency-info {
+    flex: auto;
+    gap: 1;
+    flex-direction: column;
+    font-size: 12px;
+  }
+  // Trip title style
+  .trip-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333; // Darker color for better readability
+    text-align: center; // Center the title
+  }
+
+  // Itinerary content style
+  .itinerary-c {
+    height: 300px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555; // Slightly lighter color for the content
+    margin: 20px auto; // Centered and spaced
+  }
+
+  #t-n-c{
+    max-height: 300px;
+    overflow: auto;
+  }
+  #s-t{
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  #i-e{
+    max-height: 300px;
+    overflow: auto;
+  }
+  #c-p{
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  .sharing-container-left{
+    width: 100%;
+  }
+  #hotel-stays{
+    max-height: 300px;
+    overflow: auto;
+  }
+  .select-input{
+    margin-left: 5px;
+  }
+
+  .sharing-type{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+
+  .sharing-left{
+    width: 50%;
+    word-wrap: break-word; /* Ensure long words break */
+    overflow-wrap: break-word;
+    
+  }
+
+  .sharing-radio{
+    //border: 2px solid black;
+    width: 50%;
+    
+  }
+
+  // Navigation buttons style
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between; // Space between buttons
+
+    .btn {
+      background-color: $ty-primary; // Bootstrap primary color
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:disabled {
+        background-color: #a9a9a9; // Greyed out color for disabled buttons
+        cursor: not-allowed; // Change cursor for disabled buttons
+      }
+
+      &:hover:not(:disabled) {
+        background-color: $ty-primary; // Darker shade on hover
+      }
+    }
+  }
+
+  // Overlay for modal background
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); // Semi-transparent background
+    z-index: 999; // Below the modal but above other content
+  }
+
+  // Itinerary components
+  .itinerary-c {
+    .image-carousel {
+      width: 80%;
+      margin: auto;
+
+      img {
+        // width: 100%;
+        // height: 150px;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+    }
+
+    .trip-heading {
+      background: $ty-primary;
+      width: fit-content;
+      padding: 10px;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+
+    .itinerary-road-map {
+      max-height: 300px;
+      overflow: auto;
+      .itinerary-map-item {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        padding-top: 35px;
+        
+        
+
+        .left-item {
+          padding: 5px;
+          border-radius: 5px;
+          background: $ty-primary;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          width: 15%;
+          text-align: center;
+        }
+
+        .right-item {
+          font-size: 14px;
+          text-transform: capitalize;
+          font-weight: 600;
+          width: 70%;
+          word-break: break-word;
+        }
+      }
+    }
+    .day-page-detail {
+      max-height: 300px;
+      overflow: auto;
+      font-size: 18px;
+    }
+    // Batches section style
+    .batches {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // Improved grid definition
+      margin-top: 80px;
+      text-transform: uppercase;
+      row-gap: 20px;
+
+      .batches-dates {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+
+        .month {
+          padding: 8px 12px;
+          border-radius: 10px;
+          background: $ty-primary;
+          color: #fff;
+          font-size: 26px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          width: 100px;
+        }
+
+        .date-intervals {
+          font-size: 22px;
+          text-transform: uppercase;
+          font-weight: 600;
+          word-spacing: 15px;
+          letter-spacing: 1px;
+
+          & > div {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+
+    // Inclusions and exclusions styles
+    .inclusions,
+    .exclusions {
+      li {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+    }
+
+    .exclusion-heading {
+      border-radius: 15px;
+    }
+
+    .terms-conditions {
+      li {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  // Booking button style
+  .book-trip-block {
+    margin: 25px 20px;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      border-radius: 10px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  // Review section styles
+  .review {
+    margin: 10px 20px 20px 30px;
+
+    .no-review {
+      text-align: center;
+      margin-top: 60px;
+      font-weight: 600;
+    }
+
+    .heading {
+      font-size: 22px;
+      font-weight: 700;
+      color: $ty-primary;
+    }
+
+    .review-details {
+      //width: 100%;
+      //border: 1px solid black;
+      margin-top: 10px;
+      display: flex;
+      gap: 25px;
+
+      .filled,
+      .partially,
+      .empty {
+        border: 2px solid $review-green;
+        width: 14px;
+        height: 14px;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+
+      .partially {
+        background: linear-gradient(to right, $review-green 50%, $white 50%);
+      }
+
+      .filled {
+        background: $review-green;
+      }
+
+      .review-container-left {
+        width: 30%;
+        display: flex;
+
+        .review-circle {
+          gap: 10px;
+          align-items: center;
+
+          & > div {
+            display: flex;
+            gap: 2px;
+          }
+
+          .score {
+            color: $ty-black;
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+        .review-bars {
+          margin-top: 10px;
+          margin-left: 10px;
+          display: grid;
+          grid-template-columns: fit-content(calc(80% + 12px)) 1fr auto;
+          row-gap: 5px;
+          column-gap: 10px;
+
+          & > div {
+            display: contents;
+            align-items: center;
+
+            .review-text {
+              font-size: 12px;
+              color: $ty-black;
+            }
+
+            .review-number {
+              font-size: 14px;
+            }
+
+            .bar {
+              background: $bar-bg;
+              height: 12px;
+              width: 100%;
+              border-radius: 30px;
+
+              .bar-fill {
+                border-radius: 30px;
+                height: 100%;
+                background: $review-green;
+              }
+            }
+          }
+        }
+
+        .write-review {
+          margin-top: 20px;
+
+          .write-box {
+            & > div {
+              margin-bottom: 10px;
+            }
+
+            .rating-input {
+              margin-top: 10px;
+              display: flex !important;
+              gap: 4px;
+              align-items: center;
+
+              span {
+                margin-left: 5px;
+                font-size: 12px;
+              }
+            }
+
+            .ty-input {
+              gap: 0;
+
+              label {
+                font-weight: 600;
+                margin-bottom: 0;
+              }
+            }
+
+            .review-submit {
+              button {
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      .review-container-right {
+        width: 70%;
+
+        .user-review {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          margin-bottom: 20px;
+
+          & > div {
+            border: 2px solid #eee;
+            padding: 15px 20px;
+            border-radius: 10px;
+            position: relative;
+
+            .user-name {
+              font-weight: 700;
+              color: $ty-black;
+            }
+
+            .user-rating {
+              font-weight: 600;
+            }
+
+            .user-comment {
+              font-size: 16px;
+            }
+
+            .user-date {
+              position: absolute;
+              bottom: 15px;
+              right: 20px;
+              font-weight: 600;
+              font-size: 12px;
+              color: $ty-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.full-view-image {
+  height: 80%;
+  img {
+    height: 70vh;
+    object-fit: cover;
+    
+  }
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; 
+  margin-top: 20px;
+}
+
+.navigation-btn,
+.book-trip-btn {
+  flex: 1; 
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.book-trip-btn:disabled {
+  background-color: gray !important;
+  color: white;
+  cursor: not-allowed;
+}
+
+.book-trip-btn:not(:disabled) {
+  background-color: blue !important;
+  color: white;
+  cursor: pointer;
+}
+
+
+.trip-card-details {
+  margin-top: 30px;
+  .trip-description {
+    margin-top: 30px;
+    div {
+      display: flex;
+      gap: 20px;
+      h6 {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      p {
+        // font-weight: bold;
+        font-size: 16px;
+      }
+    }
+  }
+}

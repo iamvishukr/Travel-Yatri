@@ -1,0 +1,29 @@
+@import "./../../../../scss/variables";
+
+.ty-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #6e6e6e;
+
+  label {
+    font-size: 14px;
+  }
+
+  input, textarea {
+    border: 1px solid #6e6e6e66;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 13px;
+    color: #6e6e6e;
+
+    &:focus{
+        border-color: $ty-primary;
+        outline: none;
+    }
+
+    &:hover{
+        border-color: $ty-primary;
+    }
+  }
+}

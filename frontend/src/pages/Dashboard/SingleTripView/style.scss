@@ -1,0 +1,150 @@
+@import "./../../../scss/variables";
+
+.itinerary {
+  padding: 0px 100px 200px 100px;
+  width: 90%;
+  box-shadow: 3px 3px 17px 0px #d3cdcd;
+  margin: auto;
+  color: #222;
+  margin-bottom: 20px; // to be commented
+  min-height: 910px;
+  //   font-family: "circular";
+
+  .trip-heading {
+    font-family: "circular";
+    background: $ty-primary;
+    width: fit-content;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 48px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: auto;
+  }
+
+  .itinerary-road-map {
+    margin-top: 120px;
+    position: relative;
+    // margin-bottom: 145px; // to be commented
+    .bus-top {
+      position: absolute;
+      left: 152px;
+      top: -75px;
+      transform: translateX(-46%);
+
+      i {
+        font-size: 60px;
+      }
+
+      &.bottom {
+        bottom: -120px;
+        top: auto;
+      }
+    }
+
+    .itinerary-map-item {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      padding-top: 35px;
+      position: relative;
+      //   margin-bottom: 30px;
+
+      &:after {
+        content: "";
+        background: $ty-primary;
+        padding: 80px 3px;
+        border-radius: 5px;
+        position: absolute;
+        left: 152px;
+      }
+      .left-item {
+        padding: 10px 15px;
+        border-radius: 5px;
+        background: $ty-primary;
+        color: #fff;
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        width: 15%;
+        text-align: center;
+      }
+
+      .right-item {
+        font-size: 22px;
+        text-transform: uppercase;
+        font-weight: 600;
+        width: 70%;
+      }
+    }
+  }
+
+  .batches {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 80px;
+    text-transform: uppercase;
+    row-gap: 20px;
+    .batches-dates {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      row-gap: 20px;
+
+      .month {
+        padding: 8px 12px;
+        border-radius: 10px;
+        background: $ty-primary;
+        color: #fff;
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        width: 100px;
+      }
+
+      .date-intervals {
+        font-size: 22px;
+        text-transform: uppercase;
+        font-weight: 600;
+        word-spacing: 15px;
+        letter-spacing: 1px;
+        & > div {
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+
+  .inclusions,
+  .exclusions {
+    margin-top: 60px;
+    li {
+      font-size: 22px;
+      //   text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
+
+  .exclusion-heading {
+    margin-top: 50px;
+    border-radius: 15px;
+  }
+
+  .terms-conditions {
+    margin-top: 60px;
+    li {
+      font-size: 22px;
+      //   text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
+}

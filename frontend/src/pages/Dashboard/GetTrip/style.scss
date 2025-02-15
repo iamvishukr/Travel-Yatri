@@ -1,0 +1,54 @@
+@import "./../../../scss/variables";
+
+.ty-trip-card-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 40px;
+  margin-bottom: 40px;
+}
+
+.no-trip-animation {
+  // .lottie-animation {
+  //   width: 400px;
+  //   height: 400px;
+  // }
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .no-trip-text {
+    margin-top: -50px;
+    p {
+      color: $ty-primary;
+      font-weight: 600;
+      font-size: 20px;
+      span {
+        color: $ty-black;
+      }
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .ty-trip-card-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1300px) {
+  .ty-trip-card-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 931px) {
+  .ty-trip-card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 683px) {
+  .ty-trip-card-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

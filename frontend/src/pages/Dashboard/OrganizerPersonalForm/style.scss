@@ -1,0 +1,30 @@
+@import "./../../../scss/variables";
+
+.organizer-verification {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .under-verification {
+    width: 500px;
+    height: 300px;
+    padding: 30px 20px;
+    border: 2px solid $ty-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    h1 {
+      color: $ty-primary;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    p{
+      font-weight: 600;
+      color: #444;
+      text-align: center;
+    }
+  }
+}

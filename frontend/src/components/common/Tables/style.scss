@@ -1,0 +1,43 @@
+@import "./../../../scss/variables";
+
+.common-table {
+  // padding: 0px 10px;
+  overflow: auto;
+  table {
+    overflow-x: auto;
+    // width: 100%; // this width can be managed from parent component
+    th,
+    td {
+      text-align: left;
+      padding: 8px 20px;
+    }
+    th {
+      background: $ty-primary;
+      color: #fff;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    tr {
+      border-bottom: 1px solid #fff;
+    }
+
+    .td-content{
+      padding: 0;
+    }
+
+    .view{
+      cursor: pointer;
+    }
+
+    .no-data-row {
+      position: relative;
+      h4 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

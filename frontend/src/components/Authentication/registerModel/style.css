@@ -1,0 +1,42 @@
+.auth-model span.input-group-text {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.auth-model input {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.auth-model .sub-heading{
+    font-size: 14px;
+}
+
+.auth-model .continue {
+    margin-bottom: 10px
+}
+
+.auth-model .btn{
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.auth-model .google-login-btn{
+    background-color: #3b82f6;
+}
+
+.auth-model .already-registered{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* font-size: 14px; */
+}
+
+/* .auth-model .already-registered a{
+    
+} */
+
+.auth-model .privacy-text{
+    margin-top: 15px;
+    font-size: 12px;
+    margin-bottom: 0;
+}

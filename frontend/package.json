@@ -1,0 +1,52 @@
+{
+  "name": "travel-yatri-chikky-2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-oauth/google": "^0.12.1",
+    "@reduxjs/toolkit": "https://pkg.csb.dev/reduxjs/redux-toolkit/commit/06a30ee4/@reduxjs/toolkit",
+    "@types/react-redux": "^7.1.33",
+    "@wojtekmaj/react-daterange-picker": "^6.0.0",
+    "bootstrap": "^5.3.3",
+    "cdbreact": "^1.2.1",
+    "classnames": "^2.5.1",
+    "date-fns": "^3.6.0",
+    "formik": "^2.4.6",
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
+    "react-bootstrap-sidebar-menu": "^2.0.3",
+    "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
+    "react-owl-carousel": "^2.3.3",
+    "react-redux": "^9.1.2",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.24.1",
+    "react-select": "^5.8.0",
+    "react-select-async-paginate": "^0.7.5",
+    "react-toastify": "^10.0.5",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "sass": "^1.77.8",
+    "sass-loader": "^14.2.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1"
+  }
+}

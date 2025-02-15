@@ -1,0 +1,109 @@
+.dropdown-toggle::after {
+  content: none;
+}
+
+.user-icon-header {
+  color: #fff;
+  background: #86b817;
+  padding: 6px 18px;
+  border-radius: 1019px;
+  font-size: 26px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.button--loading::after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+.button--loading {
+  position: relative;
+}
+
+.button--loading .button__text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@keyframes button-loading-spinner {
+  10% {
+    transform: rotate(0turn);
+  }
+
+  25% {
+    transform: rotate(0.5turn);
+  }
+  50% {
+    transform: rotate(1turn);
+  }
+  75% {
+    transform: rotate(1.5turn);
+  }
+
+  100% {
+    transform: rotate(2turn);
+  }
+}
+
+.nav-drop-down .nav-link {
+  display: inline;
+}
+
+/* canvas styling */
+
+.offcanvas-end {
+  width: 200px;
+}
+
+.canvas-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.canvas-item i {
+  color: #00000048;
+}
+.sidebar-item {
+  color: #86b817;
+}
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ty-ring {
+  padding: 15px;
+  border-radius: 350px;
+  border: 2px dashed;
+  max-width: 450px;
+  max-height: 450px;
+}
+
+.traveller-img {
+  border-radius: 350px;
+}
+
+.why-heading {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.home-site-logo img {
+  width: 193px;
+  height: 100px;
+  object-fit: cover;
+}

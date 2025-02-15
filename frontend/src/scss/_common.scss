@@ -1,0 +1,32 @@
+.w-70 {
+  width: 80%;
+}
+
+.text-success-cust {
+  color: rgba(12, 186, 12, 0.751);
+}
+
+.text-danger-cust {
+  color: rgba(238, 48, 48, 0.762);
+}
+
+.success-badge {
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: $white;
+    background: rgba(12, 186, 12, 0.751);
+    border-radius: 6px;
+}
+
+.warning-badge {
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    color: $white;
+    border-radius: 6px;
+    background: #c9c90f;
+    letter-spacing: 0.5px;
+}
+

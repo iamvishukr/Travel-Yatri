@@ -1,0 +1,11 @@
+.yatri-model{
+  padding: 20px;
+  width: 400px;
+  margin: auto;
+}
+
+@media (max-width: 410px) {
+  .yatri-model{
+    width: 350px;
+  }
+}

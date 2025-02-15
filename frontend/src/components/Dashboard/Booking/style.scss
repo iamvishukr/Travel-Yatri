@@ -1,0 +1,132 @@
+@import "./../../../scss/variables";
+
+.booking-modal {
+  .user-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $ty-primary;
+    font-weight: 600;
+
+    .remove-btn-user {
+      margin: 0 !important;
+      padding: 2px 10px !important;
+      font-size: 18px;
+      font-weight: 700;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .seats-available{
+    h5{
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255, 0, 0, 0.547)
+    }
+  }
+
+  .booking-input {
+    margin-top: 10px;
+    .ty-input {
+      gap: 0;
+      label {
+        font-size: 10px;
+      }
+      input {
+        font-size: 10px;
+      }
+    }
+  }
+  .user-details-fields {
+    padding: 10px 10px;
+    background: $ty-background;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 5px;
+    position: relative;
+    .ty-input {
+      gap: 0;
+      label {
+        font-size: 10px;
+      }
+      input {
+        font-size: 10px;
+      }
+    }
+
+    .remove-user {
+      position: absolute;
+      top: -7px;
+      right: -9px;
+      .remove-btn {
+        margin: 0 !important;
+        font-weight: 500;
+        background: $ty-primary;
+        border-radius: 39px !important;
+        font-size: 10px;
+        color: white;
+        padding: 0px 5px !important;
+        padding-top: 1px !important;
+      }
+    }
+  }
+
+  .seprator {
+    padding: 1px;
+    background-color: $ty-background;
+    margin: 40px 0;
+  }
+
+  .pricing-block {
+    width: 40%;
+    margin-left: auto;
+    margin-top: -20px;
+    .pricing-detail {
+      width: 100%;
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        label {
+          font-size: 12px;
+        }
+        h5 {
+          font-size: 12px;
+          font-weight: 600;
+          color: $ty-black;
+        }
+      }
+      .pricing-total {
+        margin-top: 20px;
+        label,
+        h5 {
+          color: $ty-black;
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .book-trip-block {
+    button {
+      margin-right: auto;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .booking-modal{
+    .user-details-fields{
+      grid-template-columns: 1fr;
+    }
+
+    .pricing-block{
+      width: 58%;
+    }
+  }
+}

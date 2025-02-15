@@ -1,0 +1,89 @@
+.nav-drop-down {
+  a.dropdown-toggle {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+#yatri-about {
+  background: url("img/lp-back-1.jpg");
+  position: relative;
+  z-index: -2;
+  // margin-top: -50px;
+}
+
+.delete-user {
+  cursor: pointer;
+}
+.members {
+  // padding: 25px;
+  background: url("img/lp-back-2.jpg");
+  position: relative;
+  z-index: -2;
+
+  .section-title::before {
+    width: calc(100% + 40px);
+    left: 0;
+  }
+
+  .section-title::after {
+    width: calc(100% + 60px);
+    left: 0;
+  }
+
+  .travellers {
+    margin-top: 10px;
+  }
+
+  .right,
+  .left {
+    overflow: hidden;
+  }
+}
+
+.ty-ring {
+  padding: 15px;
+  border-radius: 350px;
+  border: 2px dashed;
+  max-width: 450px;
+  max-height: 450px;
+}
+
+.traveller-img {
+  // max-width: 430px;
+  // max-height: 430px;
+  border-radius: 350px;
+}
+
+@media (max-width: 991px) {
+  .organizers {
+    .right {
+      order: 2;
+    }
+  }
+}
+
+.footer-column-1 a {
+  text-decoration: none;
+}
+
+.footer-gallery {
+  img {
+    height: 63px;
+    width: 100px;
+  }
+}
+
+.auth-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.testimonial-carousel {
+  .owl-item {
+    display: flex;
+    justify-content: space-around;
+  }
+}
